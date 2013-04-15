@@ -1,0 +1,46 @@
+﻿<Window x:Class="GuildWars2WorldEventTracker.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About" Height="250" Width="500" Icon=".\Images\Icon.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#DDDDDD" Offset="1"/>
+                <GradientStop />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="TextWrapping" Value="Wrap"/>
+            </Style>
+        </Grid.Resources>
+        
+        <StackPanel HorizontalAlignment="Center" Margin="15,5">
+            <TextBlock Text="Dragon Timer" FontSize="22" HorizontalAlignment="Center" TextDecorations="Underline" Margin="0,5"/>
+            <TextBlock Text="This program is a Guild Wars 2 event tracker which offers you a chronologic updating event list, checklist, and an announcer."/>
+            
+                <TextBlock >
+                    The data for the timers is taken from 
+                    <Hyperlink NavigateUri="http://www.guildwarstemple.com" RequestNavigate="Hyperlink_RequestNavigate">
+                        Guild Wars Temple
+                    </Hyperlink>
+                    so be advised that timers can sometimes be off because they are being updated by players.
+                </TextBlock>
+            
+            <TextBlock Margin="0,15,0,0" HorizontalAlignment="Center">           
+                You can check out my lame coding in 
+                <Hyperlink NavigateUri="http://github.com/aartist21/dragontimer" RequestNavigate="Hyperlink_RequestNavigate">
+                    DragonTimer GitHub
+                </Hyperlink>
+            </TextBlock>
+            <TextBlock Text="or PM in-game: Moonshield" HorizontalAlignment="Center"/>
+            
+        </StackPanel>
+        
+        <Button Grid.Row="1" Height="25" Width="80" Content="Close" Margin="12" Click="CloseClick" IsDefault="True"/>
+    </Grid>
+</Window>
